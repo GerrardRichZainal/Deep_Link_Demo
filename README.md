@@ -20,6 +20,5 @@ Dalam project ini, saya belajar bahwa deep linking bisa menjadi jembatan antara 
 
 Deep linking berguna dalam berbagai situasi, seperti saat user menekan link di notifikasi, membuka tautan yang dibagikan teman, atau kembali ke aplikasi setelah login lewat browser. Ini membuat pengalaman pengguna lebih cepat dan mulus. Selama pengerjaan, saya menemui beberapa tantangan:
   1. Masalah paket uni_links — paket ini kurang stabil di Android terbaru. Saya beralih ke app_links, yang lebih handal dan otomatis terhubung dengan intent filter, sehingga aplikasi bisa menangani tautan masuk lebih        lancar.
-  2. Masalah adb — saya tidak sempat membuka adb langsung di HP, tapi belajar bahwa konfigurasi adb dan pengaturan Developer Options sangat penting agar perangkat terdeteksi dan deep link bisa diuji. Teman saya              berhasil menjalankan deep link melalui adb, yang membantu saya memahami alurnya.
-
+  2. Masalah adb — elama pengerjaan project deep linking, saya menemui masalah saat mencoba menjalankan perintah adb untuk menguji link di HP. ADB awalnya tidak mengenali perangkat (adb not recognized atau no devices        found).
 Setelah perbaikan ini, deep linking akhirnya berjalan dengan baik, dan aplikasi bisa berpindah halaman otomatis sesuai link yang dibuka ✅
