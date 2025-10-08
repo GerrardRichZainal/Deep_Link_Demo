@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uni_links/uni_links.dart';
+import 'package:app_links/app_links.dart'; 
 import 'dart:async';
 import 'detail_screen.dart';
 import 'profile_screen.dart';
@@ -29,16 +29,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late final AppLinks _appLinks;
   StreamSubscription? _sub;
 
   @override
   void initState() {
     super.initState();
+    _appLinks = AppLinks();
     _handleIncomingLinks();
   }
 
   void _handleIncomingLinks() {
-    _sub = uriLinkStream.listen((Uri? uri) {
+    _sub = _appLinks.uriLinkStream.listen((uri) {
       if (uri != null) {
         _navigateFromLink(uri);
       }
